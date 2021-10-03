@@ -1,0 +1,41 @@
+<div>
+  <!-- O two-way binding é uma vinculação bidirecional que fornece aos componentes do seu aplicativo 
+  uma maneira de compartilhar dados. Use o two-way binding para ouvir eventos e atualizar valores
+  simultaneamente entre os componentes pai e filho.
+  A sintaxe [()] combina os colchetes da associação de propriedade, [], 
+  com os parênteses da associação de evento, ().
+  Use a diretiva NgModel para exibir uma propriedade de dados e atualizar essa propriedade quando 
+  o usuário fizer alterações. Importe FormsModule e adicione-o à lista de importações do NgModule. -->
+
+  <mat-form-field class="form-field" appearance="fill" color="warn">
+    <mat-label class="mat-label">Enter the zip code</mat-label>
+    <input #inputZipCode matInput maxlength="8" [(ngModel)]="zipCodeInput" />
+  </mat-form-field>
+
+  <!-- O # é utilizado para declaração de variáveis locais, veja que no método
+  chamado no evento do botão, está sendo passado direto o valor do input, sem o
+  target -->
+
+  <button
+    (click)="getAddress(+inputZipCode.value)"
+    mat-raised-button
+    color="warn"
+  >
+    Search
+  </button>
+
+  <!-- O event binding permite ouvir e responder às ações do usuário, e suas interações com os elementos HTML 
+    como pressionamentos de tecla, movimentos do mouse, cliques e toques. -->
+</div>
+
+<button class="zip-code-entered" mat-stroked-button color="warn">
+  Zip code entered: {{ zipCodeInput }}
+</button>
+
+<mat-divider></mat-divider>
+<!-- 
+Para o funcionamento dos components do Angular Material foi necessário fazer as seguintes importações
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input 
+import { MatDividerModule } from '@angular/material/divider';-->

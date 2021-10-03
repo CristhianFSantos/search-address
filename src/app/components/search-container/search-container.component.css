@@ -1,0 +1,20 @@
+div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 350px;
+}
+
+input {
+  color: var(--text-color);
+}
+
+.mat-label {
+  color: var(--text-color);
+}
+
+.zip-code-entered {
+  width: 100%;
+  text-align: start;
+  margin-bottom: 15px;
+}
