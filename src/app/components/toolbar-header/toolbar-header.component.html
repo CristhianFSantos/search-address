@@ -1,0 +1,30 @@
+<mat-toolbar
+  class="mat-toolbar"
+  color="warn"
+  [style.box-shadow]="
+    !darkMode
+      ? '-2px -7px 9px 10px rgba(0,0,0,0.48)'
+      : '-2px -7px 9px 10px rgba(255,255,255,0.48)'
+  "
+>
+  <!-- Para criar um style binding use o estilo de prefixo seguido por um ponto e o nome da 
+  propriedade de estilo CSS - por exemplo, [style.width] = "largura".
+  No caso acima, o valor passado para style binding é dinâmico de acordo com a propriedade darkMode -->
+
+  <span>Search Address</span>
+  <div class="mode">
+    <span class="mode__text">{{ darkMode ? mode[1] : mode[0] }}</span>
+
+    <!-- O class binding é usado para adicionar e remover nomes de classe CSS 
+    de um atributo de classe de um elemento.
+    No caso abaixo, o font awesome tem as classes 
+    fa-moon e fa-sun que são adicionadas dinamicamente de acordo com a propriedade darkMode -->
+
+    <i
+      [class.fa-moon]="darkMode"
+      [class.fa-sun]="!darkMode"
+      (click)="changeMode()"
+      class="fas"
+    ></i>
+  </div>
+</mat-toolbar>
