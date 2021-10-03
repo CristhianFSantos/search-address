@@ -1,4 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --background-color: #fafafa;
+  --card-color: #e7e7e7;
+  --text-color: #000000;
+  --details-color: #f44336;
+}
+.dark-mode:root {
+  --background-color: #252525;
+  --card-color: #383838;
+  --text-color: #ffffff;
+  --details-color: #f44336;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: var(--background-color);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
