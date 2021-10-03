@@ -1,0 +1,11 @@
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 30px;
+}
+.result__title {
+  font-weight: bold;
+}
+p {
+  color: var(--text-color);
+}
